@@ -77,8 +77,7 @@ app.get('/init',function(req,res){
         return post.id === comment.post_id
       })
     })
-    
-    result.currentUser= user || {}
+    result.currentUser=user || {}
     res.json(result)
   })
 })
@@ -101,7 +100,6 @@ app.get('/auth/facebook/callback',
   passport.authenticate('facebook', { failureRedirect: '/login' }),
   function(req, res) {
     // Successful authentication, redirect home.
-    // console.log('thisi s the session',this.session)
     res.redirect('/')
 });
 
